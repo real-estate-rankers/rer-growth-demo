@@ -1,0 +1,377 @@
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Jost:wght@300;400;500&display=swap">
+<style>
+.rergrowth{
+  --navy:#141848;
+  --navy-deep:#0c0f33;
+  --panel:#1b2058;
+  --gold:#f7d189;
+  --ink:#ffffff;
+  --muted:rgba(255,255,255,.72);
+  --line:rgba(247,209,137,.28);
+  --display:"Cinzel", Georgia, "Times New Roman", serif;
+  --body:"Jost", "Helvetica Neue", Arial, sans-serif;
+  color-scheme:dark;
+}
+.rergrowth *{box-sizing:border-box}
+.rergrowth{margin:0;background:var(--navy-deep);color:var(--ink);font-family:var(--body);font-weight:300;font-size:17.5px;line-height:1.7}
+.rergrowth .note{background:var(--gold);color:var(--navy);font-family:var(--body);font-weight:500;font-size:13px;text-align:center;padding:10px 16px;letter-spacing:.02em}
+.rergrowth .wrap{max-width:1080px;margin:0 auto;padding-inline:20px}
+.rergrowth header.top{display:flex;justify-content:space-between;align-items:center;padding-block:18px;border-bottom:2px solid var(--line)}
+.rergrowth .logo{font-family:var(--display);color:var(--gold);font-size:15px;letter-spacing:.12em;line-height:1.1;text-align:center}
+.rergrowth .logo small{display:block;font-size:9px;letter-spacing:.4em}
+.rergrowth .pill{font-family:var(--display);background:var(--gold);color:var(--navy);border-radius:999px;padding:8px 18px;font-size:15px;text-decoration:none}
+.rergrowth .hero{background:radial-gradient(1200px 700px at 50% -12%, rgba(247,209,137,.16), transparent 62%), linear-gradient(170deg, var(--navy) 0%, var(--navy-deep) 76%);text-align:center;padding-block:72px 64px}
+.rergrowth .eyebrow{display:inline-flex;align-items:center;gap:14px;color:var(--gold);font-size:11px;letter-spacing:.42em;text-transform:uppercase;font-weight:400}
+.rergrowth .eyebrow::before,.rergrowth .eyebrow::after{content:"";width:36px;height:1px;background:var(--gold);opacity:.7}
+.rergrowth h1{font-family:var(--display);font-weight:500;font-size:clamp(34px,6vw,58px);line-height:1.15;letter-spacing:.02em;margin:22px auto 10px;max-width:16ch;text-wrap:balance}
+.rergrowth h1 em{font-style:normal;color:var(--gold)}
+.rergrowth .sub{font-family:var(--display);font-size:clamp(19px,2.6vw,26px);color:rgba(255,255,255,.88);margin:0 0 18px;letter-spacing:.04em}
+.rergrowth .lede{color:var(--muted);max-width:60ch;margin:0 auto 34px}
+.rergrowth .ctas{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+.rergrowth .btn{display:inline-block;font-family:var(--body);font-size:12px;letter-spacing:.28em;text-transform:uppercase;text-decoration:none;padding:19px 42px;font-weight:400}
+.rergrowth .btn.primary{background:var(--gold);color:var(--navy)}
+.rergrowth .btn.ghost{border:1px solid rgba(255,255,255,.35);color:var(--gold)}
+.rergrowth .btn:focus-visible,.rergrowth .pill:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.rergrowth section{padding-block:72px}
+.rergrowth h2{font-family:var(--display);font-weight:400;font-size:clamp(26px,3.6vw,36px);letter-spacing:.03em;text-align:center;margin:0 0 12px;text-wrap:balance}
+.rergrowth .center{text-align:center;color:var(--muted);max-width:58ch;margin:0 auto 40px}
+.rergrowth .map{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.rergrowth .page{border:1px solid var(--line);background:var(--panel);padding:20px 18px;min-width:0}
+.rergrowth .page.home{grid-column:1/-1;display:flex;gap:18px;align-items:baseline;flex-wrap:wrap}
+.rergrowth .page .path{font-family:var(--body);font-size:12px;color:var(--gold);letter-spacing:.06em}
+.rergrowth .page h3{font-family:var(--display);font-weight:500;font-size:20px;margin:6px 0 6px;color:var(--ink)}
+.rergrowth .page.home h3{margin:0}
+.rergrowth .page p{margin:0;color:var(--muted);font-size:15.5px;line-height:1.6}
+.rergrowth .price{max-width:620px;margin:0 auto;border:1px solid var(--gold);background:var(--panel);padding:40px 34px;text-align:center}
+.rergrowth .price .tag{color:var(--gold);font-size:11px;letter-spacing:.38em;text-transform:uppercase}
+.rergrowth .price .amt{font-family:var(--display);font-size:64px;line-height:1;margin:16px 0 6px}
+.rergrowth .price .once{color:var(--muted);font-size:15px;margin-bottom:26px}
+.rergrowth .price ul{list-style:none;padding:0;margin:0 0 30px;text-align:left;display:grid;gap:10px}
+.rergrowth .price li{display:flex;gap:12px;align-items:baseline;border-bottom:1px solid rgba(255,255,255,.08);padding-bottom:10px}
+.rergrowth .price li::before{content:"";flex:0 0 8px;height:8px;background:var(--gold);transform:rotate(45deg);position:relative;top:-2px}
+.rergrowth .price .fine{font-size:14px;color:var(--muted);margin-top:18px}
+.rergrowth .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:s}
+.rergrowth .step{border-top:1px solid var(--gold);padding-top:16px;min-width:0}
+.rergrowth .step::before{counter-increment:s;content:"Step " counter(s);color:var(--gold);font-size:11px;letter-spacing:.3em;text-transform:uppercase}
+.rergrowth .step h3{font-family:var(--display);font-weight:500;font-size:19px;margin:8px 0 6px}
+.rergrowth .step p{margin:0;color:var(--muted);font-size:15.5px;line-height:1.6}
+.rergrowth .compare{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:880px;margin:0 auto}
+.rergrowth .col{border:1px solid var(--line);padding:26px 24px;min-width:0}
+.rergrowth .col.this{border-color:var(--gold)}
+.rergrowth .col h3{font-family:var(--display);font-weight:500;font-size:20px;margin:0 0 4px}
+.rergrowth .col .p{color:var(--gold);font-size:14px;letter-spacing:.08em;margin-bottom:14px}
+.rergrowth .col ul{margin:0;padding-left:18px;color:var(--muted);display:grid;gap:6px;font-size:15.5px}
+.rergrowth .faq{max-width:780px;margin:0 auto;display:grid;gap:10px}
+.rergrowth details{border:1px solid var(--line);background:var(--panel);padding:18px 22px}
+.rergrowth summary{cursor:pointer;font-family:var(--display);font-size:17px;list-style:none}
+.rergrowth summary::-webkit-details-marker{display:none}
+.rergrowth summary::after{content:"+";float:right;color:var(--gold)}
+.rergrowth details[open] summary::after{content:"\2212"}
+.rergrowth details p{color:var(--muted);margin:12px 0 0}
+.rergrowth .final{text-align:center;background:linear-gradient(170deg, var(--navy) 0%, var(--navy-deep) 90%);border-top:2px solid var(--line)}
+.rergrowth .alt{display:block;margin-top:18px;color:var(--muted);font-size:15px}
+.rergrowth .alt a{color:var(--gold)}
+.rergrowth footer{text-align:center;color:var(--muted);font-size:13px;padding-block:28px;border-top:1px solid rgba(255,255,255,.08)}
+@media (max-width:820px){.rergrowth .map,.rergrowth .steps{grid-template-columns:1fr 1fr}
+.rergrowth .compare{grid-template-columns:1fr}}
+@media (max-width:480px){.rergrowth .map,.rergrowth .steps{grid-template-columns:1fr}
+.rergrowth .btn{width:100%;text-align:center;padding-inline:20px}
+.rergrowth .price{padding:30px 20px}
+.rergrowth .price .amt{font-size:52px}}
+@media (prefers-reduced-motion:no-preference){.rergrowth .btn{transition:opacity .2s}
+.rergrowth .btn:hover{opacity:.88}}
+.rergrowth .devices{position:relative;max-width:900px;margin:56px auto 0;padding-bottom:40px}
+.rergrowth .browser{width:80%;background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.55);text-align:left}
+.rergrowth .bar{height:26px;background:#e9e9ee;display:flex;align-items:center;gap:7px;padding-left:12px}
+.rergrowth .bar i{width:9px;height:9px;border-radius:50%;background:#c9c9d1;display:block}
+.rergrowth .bar span{margin-left:12px;font-size:11px;color:#77778a;background:#fff;border-radius:4px;padding:1px 10px}
+.rergrowth .site{position:relative;aspect-ratio:16/9;max-width:100%;background:linear-gradient(180deg,#f3c79a 0%,#e9a07a 38%,#6d5a8a 70%,#2b2d55 100%);color:#fff;overflow:hidden}
+.rergrowth .site svg{position:absolute;left:0;right:0;bottom:0;width:100%;height:58%}
+.rergrowth .site .snav{position:absolute;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:3.2% 4.5%;font-size:clamp(7px,1.1vw,11px);letter-spacing:.14em;text-transform:uppercase}
+.rergrowth .site .snav b{font-family:var(--display);font-weight:500;letter-spacing:.08em;font-size:clamp(9px,1.4vw,14px)}
+.rergrowth .site .snav em{font-style:normal;display:flex;gap:1.6em;opacity:.9}
+.rergrowth .site .shero{position:absolute;left:6%;top:30%;max-width:60%}
+.rergrowth .site .shero h4{font-family:var(--display);font-weight:500;font-size:clamp(14px,3vw,30px);line-height:1.15;margin:0 0 4%;text-shadow:0 2px 14px rgba(0,0,0,.25)}
+.rergrowth .site .shero p{margin:0 0 6%;font-size:clamp(7px,1.15vw,12px);opacity:.92}
+.rergrowth .site .shero a{display:inline-block;background:#fff;color:#2b2d55;font-size:clamp(6px,.95vw,10px);letter-spacing:.2em;text-transform:uppercase;padding:.9em 1.8em;text-decoration:none}
+.rergrowth .phone{position:absolute;right:2%;bottom:0;width:22%;background:#111;border-radius:22px;padding:7px;box-shadow:0 24px 60px rgba(0,0,0,.6)}
+.rergrowth .phone .screen{border-radius:16px;overflow:hidden;aspect-ratio:9/19;background:#fff;display:flex;flex-direction:column}
+.rergrowth .phone .ph{flex:0 0 46%;background:linear-gradient(180deg,#f3c79a 0%,#e9a07a 45%,#6d5a8a 100%);color:#fff;padding:14% 10% 0;font-family:var(--display);font-size:clamp(8px,1.3vw,13px);line-height:1.2}
+.rergrowth .phone .pb{padding:9%;display:grid;gap:7px}
+.rergrowth .phone .pb i{display:block;height:6px;border-radius:3px;background:#e4e4ec}
+.rergrowth .phone .pb i:nth-child(2){width:70%}
+.rergrowth .phone .pb i:nth-child(4){width:55%}
+.rergrowth .phone .pb b{display:block;margin-top:6px;height:18px;background:#2b2d55;border-radius:2px}
+.rergrowth .cap{font-size:12px;color:var(--muted);letter-spacing:.18em;text-transform:uppercase;margin-top:14px;text-align:left}
+.rergrowth .thumb{height:84px;background:#f4f4f8;border-radius:4px;margin-bottom:14px;padding:8px;display:grid;gap:5px;align-content:start;overflow:hidden}
+.rergrowth .thumb i{display:block;height:5px;border-radius:2px;background:#d7d8e3}
+.rergrowth .thumb .img{height:30px;border-radius:2px;background:linear-gradient(120deg,#f3c79a,#6d5a8a)}
+.rergrowth .thumb .two{display:grid;grid-template-columns:1fr 1fr;gap:5px}
+.rergrowth .thumb .two span{height:24px;background:#e3e4ee;border-radius:2px}
+.rergrowth .thumb .form span{display:block;height:9px;border:1px solid #cfd0dc;border-radius:2px;background:#fff;margin-bottom:4px}
+.rergrowth .thumb .btnm{height:10px;width:40%;background:#2b2d55;border-radius:2px}
+.rergrowth .page.home .thumb{flex:0 0 220px;margin-bottom:0;height:96px}
+.rergrowth .home-copy{flex:1 1 260px;min-width:0}
+.rergrowth .swap{margin:22px auto 0;max-width:64ch;text-align:center;color:var(--muted);font-size:16px}
+.rergrowth .swap b{color:var(--gold);font-weight:400}
+.rergrowth .work{max-width:960px;margin:0 auto}
+.rergrowth .work img{display:block;width:100%;height:auto;border:1px solid var(--line)}
+.rergrowth .work p{color:var(--muted);font-size:14px;text-align:center;margin:14px 0 0}
+@media (max-width:640px){.rergrowth .browser{width:100%}
+.rergrowth .phone{width:30%;right:-2%;bottom:-6%}
+.rergrowth .devices{padding-bottom:56px}
+.rergrowth .page.home .thumb{flex-basis:100%}}
+.rergrowth .plans{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:760px;margin:0 auto}
+.rergrowth .plan{border:1px solid var(--line);background:var(--panel);min-width:0}
+.rergrowth .plan.featured{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold),0 30px 70px rgba(0,0,0,.4)}
+.rergrowth .ph{padding:26px 14px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:6px}
+.rergrowth .badge{font-size:10px;letter-spacing:.18em;white-space:nowrap;text-transform:uppercase;background:var(--gold);color:var(--navy);padding:5px 12px}
+.rergrowth .badge.muted{background:transparent;color:var(--gold);border:1px solid var(--line)}
+.rergrowth .pname{font-family:var(--display);font-size:24px;margin-top:12px}
+.rergrowth .pamt{font-family:var(--display);font-size:54px;line-height:1.05}
+.rergrowth .pnote{color:var(--muted);font-size:14px;margin-bottom:16px}
+.rergrowth .ph .btn{width:100%;text-align:center;padding-inline:8px;letter-spacing:.2em}
+.rergrowth .psub{color:var(--muted);font-size:13px;margin-top:6px;min-height:2.6em}
+.rergrowth .chart-wrap{max-width:860px;margin:28px auto 0;overflow-x:auto}
+.rergrowth .chart{width:100%;border-collapse:collapse;font-size:15.5px;min-width:520px}
+.rergrowth .chart th,.rergrowth .chart td{padding:14px 16px;border-bottom:1px solid rgba(255,255,255,.08);text-align:left;vertical-align:top}
+.rergrowth .chart thead th{font-family:var(--display);font-weight:500;font-size:15px;color:var(--gold);border-bottom:1px solid var(--line)}
+.rergrowth .chart thead th:not(:first-child),.rergrowth .chart td{text-align:center;width:26%}
+.rergrowth .chart tbody th{font-weight:400;color:var(--ink)}
+.rergrowth .chart td{color:var(--muted)}
+.rergrowth .chart td:nth-child(3){background:rgba(247,209,137,.05)}
+.rergrowth .yes,.rergrowth .no{display:inline-flex;align-items:center;gap:8px;font-size:14px}
+.rergrowth .yes{color:var(--ink)}
+.rergrowth .yes::before{content:"";width:8px;height:8px;background:var(--gold);transform:rotate(45deg)}
+.rergrowth .no{color:rgba(255,255,255,.45)}
+.rergrowth .no::before{content:"";width:10px;height:1px;background:rgba(255,255,255,.45)}
+.rergrowth .chart tr.care td{color:var(--ink)}
+.rergrowth .chart tr.care th a{color:var(--gold);font-size:13px;letter-spacing:.06em;text-decoration:none}
+.rergrowth .hnote{color:var(--muted);font-size:14px;margin:16px 0 0}
+.rergrowth .more{max-width:860px;margin:44px auto 0;border-top:1px solid var(--line);padding-top:36px;text-align:center}
+.rergrowth .more h3{font-family:var(--display);font-weight:500;font-size:22px;margin:0 0 8px}
+.rergrowth .more p{color:var(--muted);margin:0 auto 22px;max-width:58ch}
+.rergrowth .req{max-width:860px;margin:28px auto 0;border:1px solid var(--gold);background:rgba(247,209,137,.08);padding:16px 22px;text-align:center;color:var(--muted);font-size:15.5px}
+.rergrowth .req b{color:var(--gold);font-weight:500;display:block;font-family:var(--display);font-size:17px;letter-spacing:.03em;margin-bottom:4px}
+.rergrowth .req a{color:var(--gold)}
+.rergrowth .chart-fine{max-width:900px;margin:18px auto 0;color:var(--muted);font-size:14px;text-align:center}
+@media (max-width:560px){.rergrowth .plans{grid-template-columns:1fr}}
+.rergrowth .browser .shot{display:block;width:100%;height:auto}
+.rergrowth .phone .screen img{display:block;width:100%;height:100%;object-fit:cover;object-position:top}
+.rergrowth .center-eyebrow{display:flex;justify-content:center;margin-bottom:14px}
+.rergrowth .pgrid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.rergrowth .pcard{border:1px solid var(--line);background:var(--panel);min-width:0;display:flex;flex-direction:column}
+.rergrowth .pcard.wide{grid-column:1/-1;display:grid;grid-template-columns:1.15fr 1fr}
+.rergrowth .win{height:var(--h);overflow:hidden;background:#fff;border-bottom:1px solid var(--line);position:relative}
+.rergrowth .pcard.wide .win{border-bottom:0;border-right:1px solid var(--line)}
+.rergrowth .win img{display:block;width:100%;height:auto;transform:translateY(0);transition:transform 7s ease-in-out}
+.rergrowth .pcard:hover .win img,.rergrowth .win:focus img{transform:translateY(calc(-100% + var(--h)))}
+.rergrowth .win:focus-visible{outline:2px solid var(--gold);outline-offset:-2px}
+@media (hover:none){.rergrowth .win{overflow-y:auto;-webkit-overflow-scrolling:touch}
+.rergrowth .pcard:hover .win img{transform:none}}
+.rergrowth .pbody{padding:24px 24px 26px;min-width:0}
+.rergrowth .pbody .path{font-size:12px;color:var(--gold);letter-spacing:.06em}
+.rergrowth .pbody h3{font-family:var(--display);font-weight:500;font-size:22px;margin:6px 0 8px}
+.rergrowth .pbody p{margin:0 0 14px;color:var(--muted);font-size:15.5px;line-height:1.6}
+.rergrowth .pbody ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.rergrowth .pbody li{display:flex;gap:10px;align-items:baseline;font-size:15px;color:var(--ink)}
+.rergrowth .pbody li::before{content:"";flex:0 0 7px;height:7px;background:var(--gold);transform:rotate(45deg);position:relative;top:-2px}
+.rergrowth .every{margin:26px auto 0;border:1px solid var(--line);padding:22px 24px;text-align:center}
+.rergrowth .every h3{font-family:var(--display);font-weight:500;font-size:18px;margin:0 0 12px;color:var(--gold)}
+.rergrowth .every ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:10px 28px;color:var(--muted);font-size:15px}
+@media (max-width:820px){.rergrowth .pgrid{grid-template-columns:1fr}
+.rergrowth .pcard.wide{grid-template-columns:1fr}
+.rergrowth .pcard.wide .win{border-right:0;border-bottom:1px solid var(--line);--h:380px!important}}
+.rergrowth .demo-cta{display:flex;flex-direction:column;align-items:center;gap:12px;margin:0 auto 36px;text-align:center}
+.rergrowth .demo-cta span{color:var(--muted);font-size:14px}
+.rergrowth .chart tr.divider th{padding:22px 16px 10px;font-family:var(--display);font-weight:500;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-align:left;border-bottom:1px solid var(--line)}
+.rergrowth .faq details a{color:var(--gold)}
+.rergrowth .pf-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;max-width:920px;margin:0 auto}
+.rergrowth .pf{border:1px solid var(--line);background:var(--panel);display:flex;flex-direction:column;min-width:0}
+.rergrowth .pf-shot{display:block;text-decoration:none;border-bottom:1px solid var(--line);background:#fff}
+.rergrowth .pf-shot .bar{height:24px}
+.rergrowth .pf-shot img{display:block;width:100%;height:auto;transition:opacity .2s}
+.rergrowth .pf-shot:hover img{opacity:.9}
+.rergrowth .pf-body{padding:24px 24px 28px;display:flex;flex-direction:column;gap:6px;flex:1}
+.rergrowth .pf-tag{align-self:flex-start;font-size:10px;letter-spacing:.26em;text-transform:uppercase;border:1px solid var(--line);color:var(--gold);padding:4px 10px;margin-bottom:8px}
+.rergrowth .pf-body h3{font-family:var(--display);font-weight:500;font-size:22px;margin:0}
+.rergrowth .pf-city{color:var(--gold);font-size:12px;letter-spacing:.28em;text-transform:uppercase}
+.rergrowth .pf-body p{color:var(--muted);font-size:15.5px;line-height:1.6;margin:10px 0 16px;flex:1}
+.rergrowth .pf-link{align-self:flex-start;color:var(--gold);font-size:12px;letter-spacing:.28em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:4px}
+@media (max-width:900px){.rergrowth .pf-grid{grid-template-columns:1fr;max-width:520px;margin:0 auto}}
+body:has(.rergrowth) .site.grid-container,body:has(.rergrowth) .grid-container.container{max-width:none}
+body:has(.rergrowth) .site-content{padding:0!important;display:block}
+body:has(.rergrowth) .inside-article{padding:0!important;background:transparent}
+body:has(.rergrowth) .entry-header,body:has(.rergrowth) .featured-image{display:none}
+body:has(.rergrowth) .entry-content{margin:0!important}
+body:has(.rergrowth) .site-main{margin:0!important}
+.rergrowth{background:var(--navy-deep)}
+.rergrowth h1,.rergrowth h2,.rergrowth h3{color:inherit}
+.rergrowth a{text-decoration:none}
+.rergrowth p a,.rergrowth details a,.rergrowth .plan li a{text-decoration:underline}
+.rergrowth .cities{margin:26px 0 0;border:1px solid var(--line);background:var(--panel);padding:24px}
+.rergrowth .cities h3{font-family:var(--display);font-weight:500;font-size:20px;margin:0 0 4px;text-align:center}
+.rergrowth .cities p{color:var(--muted);text-align:center;margin:0 0 18px;font-size:15.5px}
+.rergrowth .minis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.rergrowth .mini{display:block;color:var(--ink);min-width:0}
+.rergrowth .mini img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;object-position:top;border:1px solid var(--line);background:#fff}
+.rergrowth .mini span{display:block;font-family:var(--display);font-size:16px;margin-top:8px;text-align:center}
+.rergrowth .mini:hover span{color:var(--gold)}
+.rergrowth .blogbox{margin:16px auto 0;border:1px solid var(--line);padding:20px 24px;text-align:center}
+.rergrowth .blogbox h3{font-family:var(--display);font-weight:500;font-size:18px;margin:0 0 8px;color:var(--gold)}
+.rergrowth .blogbox p{color:var(--muted);margin:0 auto 10px;max-width:62ch;font-size:15.5px}
+.rergrowth .blogbox a{color:var(--gold);text-decoration:underline;font-size:15px}
+@media (max-width:820px){.rergrowth .minis{grid-template-columns:1fr 1fr}}
+</style>
+<div class="rergrowth">
+<div class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Growth Website</span>
+    <h1>A Website Built to Grow for <em>$999.</em></h1>
+    <p class="sub">Up to Ten Pages, Live in Two Weeks.</p>
+    <p class="lede">A custom WordPress site with the five core pages every agent or team needs, plus up to five city or neighborhood pages written for the areas you serve. Your blog comes set up and ready for your first post, and the site goes live two weeks after we have your details. You pay once for the build and the site is yours. We host it while you are with us, and you can take it with you whenever you like.</p>
+    <div class="ctas">
+      <a class="btn primary" href="https://buy.stripe.com/7sYcN5cak9WZ7ZR8v7fIs0h">Get Started for $999</a>
+      <a class="btn ghost" href="#demo">See the Demo Site</a>
+    </div>
+    <p class="hnote">One-time build fee, plus hosting from $30 a month after your two free months.</p>
+    <div class="devices" aria-label="The demo Growth website on desktop and phone">
+      <div class="browser">
+        <div class="bar"><i></i><i></i><i></i><span>growth.realestaterankers.com</span></div>
+        <img class="shot" src="https://realestaterankers.com/wp-content/uploads/2026/10/growth-website-demo-desktop.jpg" alt="Home page of the demo Growth website for a fictional Charleston real estate team" width="1100" height="688">
+      </div>
+      <div class="phone" aria-hidden="true"><div class="screen"><img src="https://realestaterankers.com/wp-content/uploads/2026/10/growth-website-demo-mobile.jpg" alt="" width="360" height="779"></div></div>
+      <div class="cap">Our demo Growth site, built for a fictional Charleston team</div>
+    </div>
+  </div>
+</div>
+
+<section id="demo">
+  <div class="wrap">
+    <span class="eyebrow center-eyebrow">See It Before You Buy</span>
+    <h2>Ten Pages, Fully Built Out</h2>
+    <p class="center">This is the demo Growth site we built for The Hartwell Group, a fictional Charleston team. Your site gets the same depth, written for your market with your photos and your story.</p>
+    <div class="demo-cta"><a class="btn primary" href="https://growth.realestaterankers.com/" target="_blank" rel="noopener">Click Through the Live Demo</a><span>Opens the full demo site in a new tab. Or hover over any page below to scroll through it.</span></div>
+    <div class="pgrid"><article class="pcard wide"><div class="win" style="--h:460px" tabindex="0" aria-label="Home page preview, scrolls on hover"><img src="https://realestaterankers.com/wp-content/uploads/2026/10/growth-website-demo-home-page.jpg" alt="Full Home page of the demo Growth site" loading="lazy"></div>
+<div class="pbody"><span class="path">yourdomain.com/</span><h3>Home</h3><p>The first impression, with a clear path to a conversation from every section.</p><ul><li>Full-screen photo hero with your headline</li><li>Scrolling strip of the areas you serve</li><li>Photo cards linking to every city page</li><li>Large Buy and Sell photo panels</li><li>Team lead bio with headshot</li><li>Home value banner</li><li>Latest blog posts</li><li>Reviews section</li></ul></div></article><article class="pcard wide"><div class="win" style="--h:460px" tabindex="0" aria-label="Charleston city page preview, scrolls on hover"><img src="https://realestaterankers.com/wp-content/uploads/2026/10/growth-website-demo-charleston-page.jpg" alt="Full Charleston city page of the demo Growth site" loading="lazy"></div>
+<div class="pbody"><span class="path">/charleston/</span><h3>City Pages</h3><p>Up to five pages, one for each city or neighborhood you serve, written to show buyers and sellers you know the area.</p><ul><li>Four quick facts about the area</li><li>An introduction to the area</li><li>Four places locals love</li><li>What the housing looks like, with a local tip</li><li>Area FAQs</li><li>Links to your other city pages</li></ul></div></article><article class="pcard "><div class="win" style="--h:330px" tabindex="0" aria-label="Team page preview, scrolls on hover"><img src="https://realestaterankers.com/wp-content/uploads/2026/10/growth-website-demo-team-page.jpg" alt="Full Team page of the demo Growth site" loading="lazy"></div>
+<div class="pbody"><span class="path">/team/</span><h3>Team or About</h3><p>Introduce your team, or tell your own story if you work solo.</p><ul><li>Headshot and role for each person</li><li>Short bio for each person</li><li>Direct phone and email for each person</li><li>How your team works with clients</li></ul></div></article><article class="pcard "><div class="win" style="--h:330px" tabindex="0" aria-label="Buyers page preview, scrolls on hover"><img src="https://realestaterankers.com/wp-content/uploads/2026/10/growth-website-demo-buyers-page.jpg" alt="Full Buyers page of the demo Growth site" loading="lazy"></div>
+<div class="pbody"><span class="path">/buyers/</span><h3>Buyers</h3><p>A complete buyer guide that shows you know your market.</p><ul><li>Step-by-step buying process</li><li>Links to every city page</li><li>Buyer FAQs</li><li>Custom home search call to action</li></ul></div></article><article class="pcard "><div class="win" style="--h:330px" tabindex="0" aria-label="Sellers page preview, scrolls on hover"><img src="https://realestaterankers.com/wp-content/uploads/2026/10/growth-website-demo-sellers-page.jpg" alt="Full Sellers page of the demo Growth site" loading="lazy"></div>
+<div class="pbody"><span class="path">/sellers/</span><h3>Sellers</h3><p>Built to win the listing appointment before you walk in the door.</p><ul><li>Step-by-step selling process</li><li>Home value request form</li><li>Seller FAQs</li><li>Consultation call to action</li></ul></div></article><article class="pcard "><div class="win" style="--h:330px" tabindex="0" aria-label="Contact page preview, scrolls on hover"><img src="https://realestaterankers.com/wp-content/uploads/2026/10/growth-website-demo-contact-page.jpg" alt="Full Contact page of the demo Growth site" loading="lazy"></div>
+<div class="pbody"><span class="path">/contact/</span><h3>Contact</h3><p>Easy to reach, with no guesswork about what happens next.</p><ul><li>Contact form with city and buy or sell options</li><li>Phone, email, service area and hours</li><li>Quick reply promise</li><li>Floating contact button on every page</li></ul></div></article></div>
+    <div class="cities"><h3>The Other Four City Pages in the Demo</h3><p>Each one follows the Charleston layout with its own local facts and FAQs.</p><div class="minis"><a class="mini" href="https://growth.realestaterankers.com/mount-pleasant.html" target="_blank" rel="noopener"><img src="https://realestaterankers.com/wp-content/uploads/2026/10/growth-website-demo-mount-pleasant-page.jpg" alt="Top of the Mount Pleasant city page in the demo Growth site" loading="lazy"><span>Mount Pleasant</span></a><a class="mini" href="https://growth.realestaterankers.com/north-charleston.html" target="_blank" rel="noopener"><img src="https://realestaterankers.com/wp-content/uploads/2026/10/growth-website-demo-north-charleston-page.jpg" alt="Top of the North Charleston city page in the demo Growth site" loading="lazy"><span>North Charleston</span></a><a class="mini" href="https://growth.realestaterankers.com/summerville.html" target="_blank" rel="noopener"><img src="https://realestaterankers.com/wp-content/uploads/2026/10/growth-website-demo-summerville-page.jpg" alt="Top of the Summerville city page in the demo Growth site" loading="lazy"><span>Summerville</span></a><a class="mini" href="https://growth.realestaterankers.com/goose-creek.html" target="_blank" rel="noopener"><img src="https://realestaterankers.com/wp-content/uploads/2026/10/growth-website-demo-goose-creek-page.jpg" alt="Top of the Goose Creek city page in the demo Growth site" loading="lazy"><span>Goose Creek</span></a></div></div>
+    <div class="every"><h3>Built Into Every Page</h3><ul><li>Sticky header with a Communities menu</li><li>Floating contact button</li><li>A call to action in every section</li><li>Search-friendly headings and page titles</li></ul></div>
+    <div class="blogbox"><h3>Your Blog, Ready to Go</h3><p>We set up your blog page and post layout so you can start publishing right away. The two posts in the demo are samples that show how your posts will look.</p><a href="https://growth.realestaterankers.com/blog.html" target="_blank" rel="noopener">See the demo blog</a></div>
+    <p class="swap"><b>Need a different page?</b> Swap any of the five core pages for one that fits your business better, such as a Home Valuation page. Your five area pages can cover cities or neighborhoods.</p>
+  </div>
+</section>
+
+<section id="start">
+  <div class="wrap">
+    <h2>Choose Your Website</h2>
+    <p class="center">Both are custom WordPress sites you own outright, and you can sign up for either one online today.</p>
+    <div class="plans">
+      <div class="plan">
+        <div class="ph">
+          <span class="badge muted">Live in One Week</span>
+          <div class="pname">Starter</div>
+          <div class="pamt">$499</div>
+          <div class="pnote">One-time build fee</div>
+          <a class="btn ghost" href="https://buy.stripe.com/9B65kD5LWc575RJfXzfIs0g">Get Started</a>
+          <span class="psub">Sign up online, no call needed</span>
+        </div>
+      </div>
+      <div class="plan featured">
+        <div class="ph">
+          <span class="badge ">Most Pages</span>
+          <div class="pname">Growth</div>
+          <div class="pamt">$999</div>
+          <div class="pnote">One-time build fee</div>
+          <a class="btn primary" href="https://buy.stripe.com/7sYcN5cak9WZ7ZR8v7fIs0h">Get Started</a>
+          <span class="psub">Sign up online, no call needed</span>
+        </div>
+      </div>
+    </div>
+    <div class="req"><b>Every website needs a hosting plan.</b> Your site runs on one of our <a href="https://realestaterankers.com/real-estate-website-hosting/">hosting and care plans</a>, starting at $30 a month. Hosting is added at checkout with your free months shown below, and you can move up to Care or Care Plus at any time.</div>
+    <div class="chart-wrap">
+      <table class="chart">
+        <thead><tr><th scope="col">What you get</th><th scope="col">Starter</th><th scope="col">Growth</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Custom WordPress design you own</th><td><span class="yes">Included</span></td><td><span class="yes">Included</span></td></tr>
+          <tr><th scope="row">Pages</th><td>5 core pages</td><td>Up to 10 pages</td></tr>
+          <tr><th scope="row">Every page written for your market</th><td><span class="yes">Included</span></td><td><span class="yes">Included</span></td></tr>
+          <tr><th scope="row">Need a domain? We register it in your name, first year included</th><td><span class="yes">Included</span></td><td><span class="yes">Included</span></td></tr>
+          <tr><th scope="row">Lead capture forms</th><td><span class="yes">Included</span></td><td><span class="yes">Included</span></td></tr>
+          <tr><th scope="row">Mobile-first, SEO-ready build</th><td><span class="yes">Included</span></td><td><span class="yes">Included</span></td></tr>
+          <tr><th scope="row">Edit it yourself (free Advanced Custom Fields)</th><td><span class="yes">Included</span></td><td><span class="yes">Included</span></td></tr>
+          <tr class="care"><th scope="row">Free hosting to start<br><a href="https://realestaterankers.com/real-estate-website-hosting/">See hosting and care plans &rarr;</a></th><td>1 month of Hosting</td><td>2 months of Hosting</td></tr>
+          <tr><th scope="row">Neighborhood or community pages</th><td><span class="no">Not included</span></td><td>Up to 5</td></tr>
+          <tr><th scope="row">Blog set up and ready to post</th><td><span class="no">Not included</span></td><td><span class="yes">Included</span></td></tr>
+          <tr><th scope="row">Rounds of revisions</th><td>1</td><td>1</td></tr>
+          <tr><th scope="row">Turnaround</th><td>1 week</td><td>2 weeks</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="chart-fine">Prices are one-time build fees, and turnaround starts once we have all of your details. After your free months, your hosting plan continues at its regular monthly price unless you switch or cancel with 7 days&rsquo; notice. Need a domain? We register it in your name and include the first year, and it renews in your name each year after that.</p>
+    <div class="more">
+      <h3>Need IDX Search or SEO Built In?</h3>
+      <p>Our larger builds add IDX listing search and fully written SEO city pages. Each one starts with a short call.</p>
+      <a class="btn ghost" href="https://realestaterankers.com/real-estate-web-design/">See IDX and SEO Websites</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>How It Works</h2>
+    <p class="center">No sales call needed. Sign up and send us your details. We take it from there.</p>
+    <div class="steps">
+      <div class="step"><h3>Sign Up</h3><p>Pay the one-time $999. Hosting is added at checkout, and your first two months are free.</p></div>
+      <div class="step"><h3>Send Your Details</h3><p>A short form collects your logo, team photos, bios, the five areas you want pages for and your domain.</p></div>
+      <div class="step"><h3>Review Your Site</h3><p>We build every page and send you a preview. You get one round of changes.</p></div>
+      <div class="step"><h3>Launch</h3><p>Your site goes live two weeks after we have everything, with every login in your name.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="portfolio">
+  <div class="wrap">
+    <span class="eyebrow center-eyebrow">Complete Website Builds</span>
+    <h2>From the Team Behind These Sites</h2>
+    <p class="center">Every Growth site is designed and built by the same team behind our Complete Websites. The sites below are full Complete builds with IDX search and neighborhood pages, not Growth sites.</p>
+    <div class="pf-grid"><article class="pf"><a class="pf-shot" href="https://berniegallerani.com/" target="_blank" rel="noopener"><div class="bar"><i></i><i></i><i></i><span>berniegallerani.com</span></div><img src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fberniegallerani.com%2F?w=1280&amp;h=800" alt="Home page of Bernie Gallerani Real Estate, a Complete Website by Real Estate Rankers" width="640" height="395" loading="lazy"></a>
+<div class="pf-body"><span class="pf-tag">Complete Website</span><h3>Bernie Gallerani Real Estate</h3><span class="pf-city">Nashville, TN</span><p>A large team website with more than 130 IDX home search pages for the communities they serve, plus instant home value and instant offer funnels that turn visitors into seller leads.</p><a class="pf-link" href="https://berniegallerani.com/" target="_blank" rel="noopener">View Live Site</a></div></article><article class="pf"><a class="pf-shot" href="https://propertiesinvirginiabeach.com/" target="_blank" rel="noopener"><div class="bar"><i></i><i></i><i></i><span>propertiesinvirginiabeach.com</span></div><img src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fpropertiesinvirginiabeach.com%2F?w=1280&amp;h=800" alt="Home page of Properties in Virginia Beach, a Complete Website by Real Estate Rankers" width="640" height="400" loading="lazy"></a>
+<div class="pf-body"><span class="pf-tag">Complete Website</span><h3>Properties in Virginia Beach</h3><span class="pf-city">Virginia Beach, VA</span><p>A coastal market website built to showcase active listings and turn neighborhood searches into buyer and seller inquiries.</p><a class="pf-link" href="https://propertiesinvirginiabeach.com/" target="_blank" rel="noopener">View Live Site</a></div></article><article class="pf"><a class="pf-shot" href="https://clariziohomes.com/" target="_blank" rel="noopener"><div class="bar"><i></i><i></i><i></i><span>clariziohomes.com</span></div><img src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fclariziohomes.com%2F?w=1280&amp;h=800" alt="Home page of Clarizio Homes, a Complete Website by Real Estate Rankers" width="640" height="400" loading="lazy"></a>
+<div class="pf-body"><span class="pf-tag">Complete Website</span><h3>Clarizio Homes</h3><span class="pf-city">Columbus, OH</span><p>A polished personal brand site that positions the agent as the authority in the Columbus market and routes every visitor toward a conversation.</p><a class="pf-link" href="https://clariziohomes.com/" target="_blank" rel="noopener">View Live Site</a></div></article><article class="pf"><a class="pf-shot" href="https://jakeryanrealty.com/" target="_blank" rel="noopener"><div class="bar"><i></i><i></i><i></i><span>jakeryanrealty.com</span></div><img src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fjakeryanrealty.com%2F?w=1280&amp;h=800" alt="Home page of Jake Ryan Realty, a Complete Website by Real Estate Rankers" width="640" height="400" loading="lazy"></a>
+<div class="pf-body"><span class="pf-tag">Complete Website</span><h3>Jake Ryan Realty</h3><span class="pf-city">Hocking Hills, OH</span><p>A luxury custom theme build for the Hocking Hills market, with dedicated service pages and calls to action throughout.</p><a class="pf-link" href="https://jakeryanrealty.com/" target="_blank" rel="noopener">View Live Site</a></div></article></div>
+    <p class="center" style="margin:34px auto 0"><a class="btn ghost" href="https://realestaterankers.com/real-estate-web-design/">See the Complete Website</a></p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Questions</h2>
+    <div class="faq">
+      <details><summary>What do I need besides the $999?</summary><p>Hosting, and your first two months are included. After that it is $30 a month. We set it up and connect everything before launch, and you can add <a href="https://realestaterankers.com/real-estate-website-hosting/">Care</a> if you want us to handle updates and edits. If you do not have a domain yet, we register one in your name and the first year is included.</p></details>
+      <details><summary>What counts as a city or neighborhood page?</summary><p>Any area you want to be known for. It can be a city, a town, a neighborhood or a community. You choose up to five on your details form, and we write each page for that area.</p></details>
+      <details><summary>Do you write the content for me?</summary><p>Yes. Every page is written for your market using the details form you fill out, just like the demo site. You can ask for changes during your revision round.</p></details>
+      <details><summary>Do you write blog posts too?</summary><p>The Growth build sets up your blog and post layout so you can publish right away. Ongoing blog writing is part of our <a href="https://realestaterankers.com/seo/real-estate/">SEO packages</a>, so if you want us to write your posts, that is the place to start.</p></details>
+      <details><summary>Can I show listings on a Growth site?</summary><p>Listing search is not part of the Growth build. If your brokerage already gives you a listing search page, we can link to it from each city page. If you want IDX built in, see our <a href="https://realestaterankers.com/real-estate-web-design/">larger website builds</a>.</p></details>
+      <details><summary>Does it work for a solo agent?</summary><p>Yes. The demo shows a team, but the Team page becomes an About page for a solo agent. Everything else works the same way.</p></details>
+      <details><summary>Do I really own the website?</summary><p>Yes. Your domain is registered in your name, and once the build is paid, the website files and content belong to you. While you are with us, the site runs on our hosting so we can keep it updated and backed up. If you ever leave, we move it to hosting in your name or send you a complete copy, at no charge.</p></details>
+      <details><summary>How long does it take?</summary><p>Two weeks from the day we receive all of your details, including your photos, bios, area list and domain access. The sooner those come in, the sooner you launch.</p></details>
+      <details><summary>Can I add more pages later?</summary><p>Yes. Your Growth site is built so we can add more area pages or IDX search later. Tell us what you want to add and we will quote it.</p></details>
+      <details><summary>Can I talk to someone before I sign up?</summary><p>Of course. <a href="https://calendly.com/haley-realestaterankers/discovery-call" target="_blank" rel="noopener">Book a short call</a> and we will answer anything you want to know first.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2>Build a Site That Grows With You</h2>
+    <p class="center">Up to ten pages for one payment of $999, on a website that stays yours. Hosting is free for the first two months, then $30 a month.</p>
+    <a class="btn primary" href="https://buy.stripe.com/7sYcN5cak9WZ7ZR8v7fIs0h">Get Started for $999</a>
+    <span class="alt">Have a question first? <a href="https://calendly.com/haley-realestaterankers/discovery-call" target="_blank" rel="noopener">Book a quick call</a></span>
+  </div>
+</section>
+</div>
